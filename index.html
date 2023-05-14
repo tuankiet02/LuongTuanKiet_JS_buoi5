@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- font font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- ===============BÀI TẬP 1 ================ -->
+  <div class="container row mt-3">
+    <h1>Bài tập 1</h1>
+    <h3 class="alert alert-success">Quản lý tuyển sinh</h3>
+    <div class="chia_hang">
+      <!-- Điểm Chuẩn  -->
+      <div class="mb-3 col-4">
+        <div class="mt-5 input-group">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-success text-body"><b> Điểm chuẩn:</b></button>
+          </div>
+          <input type="text" class="form-control" name="" id="diemChuan" placeholder="Nhập Điểm:">
+        </div>
+        <!-- Điểm môn 1 -->
+        <div class="mt-5 input-group">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-success">Điểm môn 1:</button>
+          </div>
+          <input type="text" class="form-control" name="" id="diem1" placeholder="Nhập Điểm:">
+        </div>
+        <!-- Điểm môn 2 -->
+        <div class="mt-5 input-group">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-success">Điểm môn 2:</button>
+          </div>
+          <input type="text" class="form-control" name="" id="diem2" placeholder="Nhập Điểm:">
+        </div>
+        <!-- Điểm môn 3 -->
+        <div class="mt-5 input-group">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-success">Điểm môn 3:</button>
+          </div>
+          <input type="text" class="form-control" name="" id="diem3" placeholder="Nhập Điểm:">
+        </div>
+      </div>
+      <div class="mb-3 col-4">
+        <!-- Khu vực  -->
+        <div class="mt-5 input-group">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-success">Khu vực:</button>
+          </div>
+          <select name="" class="form-control" id="khuVuc">
+            <option value="">Bấm chọn khu vực</option>
+            <option value="">X(không thuộc khu vực ưu tiên)</option>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+          </select>
+        </div>
+        <!-- Đối tượng -->
+        <div class="mt-5 input-group">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-success">Đối Tượng:</button>
+          </div>
+          <select name="" class="form-control" id="doiTuong">
+            <option value="">Bấm chọn đối tượng</option>
+            <option value="">0 (Không thuộc đối tượng ưu tiên)</option>
+            <option value="mot">1</option>
+            <option value="hai">2</option>
+            <option value="ba">3</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="input-group-prepend text-center mt-2 mx-2">
+      <button class="btn btn-warning rounded-5 text-bg-primary px-5" id="tinhDiem" onclick="tinhKetQua()">Kết quả &ensp;
+
+      </button>
+    </div>
+    <div class="ket_qua text-black py-2 px-4" id="ketQua">
+      <i class="fa-solid fa-hand-point-right text-warning"></i>
+    </div>
+  </div>
+  </div>
+  <!-- Bài Tập 2 -->
+  <div class="container row mt-3">
+    <h1>Bài tập 2</h1>
+    <h3 class="alert alert-success">Tính tiền điện:</h3>
+    <div class="chia_hang">
+      <!--  Nhập Thông Tin -->
+      <div class="mb-3 col-4">
+        <div class="mt-5 input-group">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-success text-body"><b> Họ Và Tên: </b></button>
+          </div>
+          <input type="text" class="form-control" name="" id="hoTen" placeholder="Nhập họ tên">
+        </div>
+        <!--Tiền điện sử dụng -->
+        <div class="mt-5 input-group">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-success text-body">Số điện sử dụng</button>
+          </div>
+          <input type="text" class="form-control" name="" id="dienSuDung" placeholder="Nhập số KW">
+        </div>
+      </div>
+    </div>
+    <!-- Tính tiền  -->
+    <div class="input-group-prepend text-center mt-2 mx-2">
+      <button class="btn btn-warning rounded-5 text-bg-primary px-4" id="tinhDiem" onclick="tinhTienDien()">Tính tiền
+        điện &ensp;
+
+      </button>
+    </div>
+    <div class="ket_qua text-black py-2 px-4" id="tinhTien">
+      <i class="fa-solid fa-hand-point-right text-warning"></i>
+    </div>
+  </div>
+  </div>
+  <!-- ==========Bài 3============ -->
+  <div class="container row mt-3">
+    <h1>Bài tập 3</h1>
+    <h3 class="alert alert-success">Tính thuế thu nhập cá nhân</h3>
+
+    <!-- Thông tin -->
+    <div class="mb-3  title">
+
+      <!-- Họ Và Tên -->
+      <div class="mt-5 mx-3 input-group">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-success">Họ và tên:</button>
+        </div>
+        <input type="text" class="form-control" name="" id="ten" placeholder=" Nhập họ tên">
+      </div>
+      <!-- Tổng Thu Nhập -->
+      <div class="mt-5 mx-3 input-group">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-success">Thu nhập:</button>
+        </div>
+        <input type="text" class="form-control" name="" id="thuNhap" placeholder="Tổng thu nhập năm">
+      </div>
+      <!-- Người Phụ Thuộc -->
+      <div class="mt-5 mx-3 input-group">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-success">Người phụ thuộc:</button>
+        </div>
+        <input type="text" class="form-control" name="" id="nguoiPhuThuoc" placeholder="Số người phụ thuộc:">
+      </div>
+    </div>
+    <div class="input-group-prepend text-center mt-2 mx-2">
+      <button class="btn btn-warning rounded-5 text-bg-primary px-4" id="tinhThue"
+        onclick="tinhTienThueThuNhapCaNhan()">Tính tiền
+        thuế &ensp;
+      </button>
+    </div>
+    <div class="ket_qua text-black py-2 px-4" id="tinhTienThue">
+      <i class="fa-solid fa-hand-point-right text-warning"></i>
+    </div>
+  </div>
+  </div>
+  <!-- =========Bài 4============= -->
+  <div class="container row mt-3">
+    <h1> Bài tập 4</h1>
+    <h3 class="alert alert-success"> Tính tiền cáp</h3>
+    <!-- Khách Hàng -->
+    <div class="mb-3 col-4 title">
+      <div class="mt-5 input-group mx-3">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-success">Khách hàng:</button>
+        </div>
+        <select name="" class="form-control" id="loaiKhachHang" onchange="myFunction()">
+          <option value="">Chọn loại khách hàng</option>
+          <option value="canhan">Cá nhân</option>
+          <option value="doanhnghiep" id="doanhNghiep">Doanh Nghiệp</option>
+
+        </select>
+      </div>
+      <!-- Mã Khách Hàng -->
+      <div class="mt-5 input-group mx-2">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-success">Mã khách hàng</button>
+        </div>
+        <input type="text" class="form-control" name="" id="maKhachHang" placeholder="Nhập mã khách hàng">
+      </div>
+      <!-- Kênh Cao Cấp -->
+      <div class="mt-5 input-group mx-3">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-success">Kênh cao cấp:</button>
+        </div>
+        <input type="text" class="form-control" name="" id="kenhCaoCap" placeholder="Số kênh cao cấp">
+      </div>
+    </div>
+    <!-- Số Kết Nối -->
+    <div class="mt-5 input-group w-75" id="ketNoi">
+      <div class="input-group-prepend">
+        <button class="btn btn-outline-success">Số kết nối</button>
+      </div>
+      <input type="text" class="form-control" name="" id="soKetNoi" placeholder="Nhập số kết Nối">
+    </div>
+    <!-- Tinhs Tiền  -->
+    <div class="input-group-prepend text-center mt-2 mx-2">
+      <button class="btn btn-warning rounded-5 text-bg-primary px-4" id="tinhThue" onclick="tinhTienCapSuDung()">Tính
+        tiền cáp &ensp;
+      </button>
+    </div>
+    <div class="ket_qua text-black py-2 px-4" id="tinhTienCap">
+      <i class="fa-solid fa-hand-point-right text-warning"></i>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+  <script src="./index.js"></script>
+</body>
+
+</html>

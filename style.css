@@ -1,0 +1,32 @@
+.ket_qua {
+    border: 1px solid #81deb4;
+    border-radius: 5px;
+    width: 40%;
+    margin: 30px auto;
+    background-color: #D1E7DD;
+
+}
+.ket_qua i{
+    font-size: 20px;
+}
+.container {
+    border: 3px solid black;
+    padding: 50px;
+    margin: 50px auto;
+}
+input { width: 50%;}
+.chia_hang {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.title{
+    display: flex;
+    width: 100%;
+}
+#soKetNoi {
+    width: 50%; 
+}
+#ketNoi {
+    display: none;
+}
